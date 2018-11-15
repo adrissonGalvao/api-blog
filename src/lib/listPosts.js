@@ -4,7 +4,7 @@ const Post = require('../model/post');
 require('./connection');
 
 function listPosts(res) {
-  Post.find({}, (error, result) => {
+  Post.find({}).select('-__v').exec((error, result) => {
     if (error === null) {
       res.status(200).json(result);
     } else {
