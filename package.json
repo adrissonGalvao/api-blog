@@ -1,0 +1,48 @@
+{
+  "name": "api-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API para fazer extração de dados e controle do conteúdo dos posts do blog",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "PORT=3000 nodemon ./bin/www",
+    "extract": "node -e 'require(\"./src/lib/extractData\").init()'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiocesar7/api-blog.git"
+  },
+  "keywords": [
+    "api",
+    "blog",
+    "node",
+    "express"
+  ],
+  "author": "Caio César",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caiocesar7/api-blog/issues"
+  },
+  "homepage": "https://github.com/caiocesar7/api-blog#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-rate-limit": "^3.3.2",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.4.0",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.23",
+    "mongoose": "^5.3.12",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.3.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.5",
+    "supertest": "^3.3.0"
+  }
+}
