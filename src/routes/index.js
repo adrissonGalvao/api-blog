@@ -19,20 +19,20 @@ router.get('/posts', (req, res) => {
   listPosts(res);
 });
 
-router.get('/post:/id', (req, res) => {
+router.get('/post/:id', (req, res) => {
   const findPost = require('../lib/findPost');
   const { id } = req.params;
   findPost(res, id);
 });
 
-router.patch('/post:/id', (req, res) => {
+router.patch('/post/:id', (req, res) => {
   const updatePost = require('../lib/updatePost');
   const { id } = req.params;
   const { body } = req;
   updatePost(res, id, body);
 });
 
-router.delete('/post:/id', (req, res) => {
+router.delete('/post/:id', (req, res) => {
   const deletePost = require('../lib/deletePost');
   const { id } = req.params;
   deletePost(res, id);
