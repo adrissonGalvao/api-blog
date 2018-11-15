@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const http = require('http');
+const app = require('../app');
+
+const port = process.env.PORT || 80;
+app.set('port', port);
+
+const server = http.createServer(app);
+server.listen(port);
+server.on('error', onError);
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+}
