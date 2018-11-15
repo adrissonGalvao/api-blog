@@ -7,8 +7,8 @@ function listPosts(res) {
   Post.find({}, (error, result) => {
     if (error === null) {
       res.status(200).json(result);
-      console.log('a');
     } else {
+      console.log(error);
       res.status(503);
     }
   });
