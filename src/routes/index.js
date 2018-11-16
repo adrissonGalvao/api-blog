@@ -14,6 +14,13 @@ router.post('/post', (req, res) => {
   createPost(res, body);
 });
 
+router.post('/comment/:id', (req, res) => {
+  const createComments = require('../lib/createComments');
+  const { body } = req;
+  const { id } = req.params;
+  createComments(res, id, body);
+});
+
 router.get('/posts', (req, res) => {
   const listPosts = require('../lib/listPosts');
   listPosts(res);
