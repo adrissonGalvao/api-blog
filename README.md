@@ -22,7 +22,7 @@ Para o funcionamento da API, é necessário definir as variáveis de ambiente ab
 - KEY_OMDB: Chave para consultar dados dos filmes na API OMDb (http://www.omdbapi.com/)
 
 ## Extração de dados para o MongoDB
-Para realizar a extração e a inserção dos dados no MongoDb, é necessário que os dados estejam nesse formato, a parte de comentários suporta *N* comentários na hora da inserção do post.
+Para realizar a extração e a inserção dos dados no MongoDb, é necessário que os dados estejam nesse formato, a parte de comentários suporta *N* comentários na hora da inserção do post. O arquivo deve ser salvo com o nome `mock.json` ou mudar em `/src/lib/extractData.js` para o nome desejado.
 ```json
 {
 	"title": "Um pouco sobre Jornada nas Estrelas",
