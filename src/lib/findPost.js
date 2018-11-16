@@ -2,25 +2,22 @@
 
 require('./connection');
 const Post = require('../model/post');
+const findMovieInfo = require('./findMovieInfo');
 
 function findPost(res, id) {
   // verificando se é um ObjectId válido
   if (id.match(/^[0-9a-fA-F]{24}$/)) {
     Post.findOne({ _id: id }).select('-__v').exec((error, result) => {
       if (error === null) {
-        let requestResult;
         if (result) {
-          requestResult = {
-            status: 'success',
-            data: result
-          };
+          findMovieInfo(res, result);
         } else {
-          requestResult = {
+          const requestResult = {
             status: 'success',
             data: {}
           };
+          res.status(200).json(requestResult);
         }
-        res.status(200).json(requestResult);
       } else {
         console.log(error);
         res.status(503);
