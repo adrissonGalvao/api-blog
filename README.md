@@ -37,7 +37,7 @@ Para realizar a extração e a inserção dos dados no MongoDb, é necessário q
 	}]
 }
 ```
-## Exemplos para testar as requisições
+## Exemplos de requisições
 #### Criar post para o Blog
 ```curl
 curl -X POST \
