@@ -31,6 +31,7 @@
     "express": "^4.16.4",
     "express-rate-limit": "^3.3.2",
     "fs": "0.0.1-security",
+    "jsonschema": "^1.2.4",
     "jsonwebtoken": "^8.4.0",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.23",
